@@ -34,9 +34,8 @@ def best_actions(list_actions):
     wallet_cost = 0
 
     actions_list_sorted = sorted(
-        list_actions,
-        key=lambda x: x[2],
-        reverse=True,
+        #list_actions, key=lambda x: x[1] * x[2] / 100, reverse=True,
+        list_actions, key=lambda x: x[2], reverse=True,
     )
 
     for action in actions_list_sorted:
@@ -45,6 +44,7 @@ def best_actions(list_actions):
             wallet_cost += action[1]
             cumul_profit += action[2]
 
+    # print(best_wallet)
     return best_wallet
 
 
@@ -78,6 +78,7 @@ def display(best_wallet):
 @execution_time
 def main():
     display(best_actions(consult_csv()))
+    # best_actions(consult_csv())
 
 
 if __name__ == "__main__":

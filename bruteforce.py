@@ -3,9 +3,9 @@ from itertools import combinations
 import time
 import csv
 
-MAX_CLIENT_WALLET = 500
-CSV_FILE = "csv/actions.csv"
-# CSV_FILE = "csv/dataset1.csv"
+MAX_CLIENT_WALLET = 150
+CSV_FILE = "csv/actions2.csv"
+#CSV_FILE = "csv/dataset1.csv"
 # CSV_FILE = 'csv/dataset2.csv'
 
 
